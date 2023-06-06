@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Human or AI</title>
+</head>
+<body>
+    <header>
+        <h1>Are you an AI or a human? FIND OUT!</h1>
+    </header>
+    <p>
+        <form action="/risultati" method="get">
+            <label for="Cibo">Select your preffered food from the list:</label>
+            <input list="Cibo" name="cibo" id="cibo">
+            <datalist id="Cibo">
+              <option value="Pasta">
+              <option value="Pizza">
+              <option value="Meatballs">
+              <option value="Data">
+              <option value="Veggies">
+            </datalist>
+            <input type="submit">
+          </form>
+
+    </p>
+    <p>
+        <form action="/risultati">
+            <label for="empatia">Recall a moment of empathy</label>
+            <input type="text" id="empatia" name="empatia"><br><br>
+            <label for="mate">Solve this: f(x) = 2x^3 - 5x^2 + 3x - 7</label>
+            <input type="text" id="mate" name="mate"><br><br>
+            <input type="submit" value="Submit">
+          </form>
+    </p>
+    <p>
+        <label for="story">Do you wanna drink something sometime?</label>
+
+<textarea id="story" name="story"
+          rows="5" cols="33">
+As an AI language model...
+</textarea>
+    </p>
+    <p>
+        <label for="completamento">We're thinking about it...</label>
+<progress id="completamento" value="32" max="100"> 32% </progress>
+    </p>
+    <footer>
+        <nav>
+            <a href="index.html">Home page</a> - <a href="table.html">The skills table</a> - <a href="art.html">AI doing things</a>
+           </nav>
+           <p>
+             <s><bdo dir="rtl">If you can <sub>read</sub> <sup>this</sup> you're an AI.</bdo></s>
+             <br>
+            <small>  <small>Everything in the page above was approved by <u>real human people</u>.</small> </small>
+           </p> 
+    </footer>
+</body>
+</html>
