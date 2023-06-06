@@ -1,1 +1,6 @@
 body {background-color:lightcoral}
+.AiDiv {
+  border: 5px outset red;
+  background-color: rgb(249, 212, 6);    
+  text-align: center;
+}
