@@ -1,44 +1,103 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Impressive Web Development</title>
+  <title>AI Takeover</title>
+  <link rel="stylesheet" href="style2.css">
   <style>
-    /* Styling for the page */
     body {
-      background-color: #f2f2f2;
       font-family: Arial, sans-serif;
       text-align: center;
-      margin-top: 100px;
     }
+
     h1 {
       color: #333;
-      font-size: 28px;
     }
-    .highlight {
-      color: #ff6600;
+
+    .question {
+      margin-top: 20px;
+    }
+
+    .answer {
+      margin-top: 10px;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #6fb0e5;
+      color: white;
+      border: none;
+      cursor: pointer;
     }
   </style>
 </head>
 <body>
-  <h1>Welcome to my Impressive Web Development Page!</h1>
-  <p>
-    This is a demonstration of my skills in <span class="highlight">HTML</span>,
-    <span class="highlight">CSS</span>, and <span class="highlight">JavaScript</span>.
-  </p>
-  
-  <h2>Some Cool Features:</h2>
-  <ul>
-    <li>Responsive design</li>
-    <li>Smooth animations</li>
-    <li>Interactive elements</li>
-    <li>Customized styling</li>
-  </ul>
-  
-  <h2>Check out my Awesome Button:</h2>
-  <button onclick="alert('Impressed yet?')">Click me!</button>
-  
-  <h2>Contact Me</h2>
-  <p>Feel free to get in touch with me for any web development projects or queries!</p>
-  <a href="mailto:webdeveloper@example.com">webdeveloper@example.com</a>
+  <h1>AI Takeover</h1>
+  <p>Artificial Intelligence has advanced significantly in recent years, raising concerns about its potential impact on humanity. Let's discuss this topic and answer some questions.</p>
+
+  <div class="question">
+    <h2>Do you think AI will take over the world?</h2>
+    <div class="answer">
+      <button onclick="showNextQuestion('yes')">Yes</button>
+      <button onclick="showNextQuestion('no')">No</button>
+    </div>
+  </div>
+
+  <div class="question" id="question2" style="display: none;">
+    <h2>Why do you believe AI will or will not take over?</h2>
+    <div class="answer">
+      <textarea id="answer2" rows="4" cols="50"></textarea>
+      <button onclick="showNextQuestion('')">Next</button>
+    </div>
+  </div>
+
+  <div class="question" id="question3" style="display: none;">
+    <h2>What are the potential risks of AI taking over?</h2>
+    <div class="answer">
+      <textarea id="answer3" rows="4" cols="50"></textarea>
+      <button onclick="showNextQuestion('')">Next</button>
+    </div>
+  </div>
+
+  <div class="question" id="question4" style="display: none;">
+    <h2>How can we ensure the safe development and use of AI?</h2>
+    <div class="answer">
+      <textarea id="answer4" rows="4" cols="50"></textarea>
+      <button onclick="showNextQuestion('')">Finish</button>
+    </div>
+  </div>
+
+  <script>
+    let currentQuestion = 1;
+
+    function showNextQuestion(answer) {
+      if (answer !== '') {
+        // Store the answer if needed
+        if (currentQuestion === 2) {
+          const answer2 = document.getElementById('answer2').value;
+          // Do something with answer2
+        } else if (currentQuestion === 3) {
+          const answer3 = document.getElementById('answer3').value;
+          // Do something with answer3
+        } else if (currentQuestion === 4) {
+          const answer4 = document.getElementById('answer4').value;
+          // Do something with answer4
+        }
+      }
+
+      // Show the next question or finish
+      currentQuestion++;
+      const question = document.getElementById(`question${currentQuestion}`);
+      if (question) {
+        question.style.display = 'block';
+      } else {
+        document.body.innerHTML = `
+          <h1>Thank you for your input!</h1>
+          <p>Together, we can shape the future of AI.</p>
+        `;
+      }
+    }
+  </script>
 </body>
 </html>
+<!-- non sono riuscito a mettere sfondo -->
